@@ -16,14 +16,16 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView text1;     // TextViewの変数 text1 を用意
-    private Button btn1;        // Buttonの変数 btn1 を用意
 
+//    private Button Button01;
+//    private TextView TextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_main );
+        //setContentView ( R.layout.fragment_dashboard );
+
         BottomNavigationView navView = findViewById ( R.id.nav_view );
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -34,15 +36,16 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController ( this, navController, appBarConfiguration );
         NavigationUI.setupWithNavController ( navView, navController );
 
-        text1 = findViewById(R.id.text1);                   // text1というIDのViewを取得しtext1変数に代入
-        btn1 = findViewById(R.id.btn1);                     // btn1というIDのViewを取得しbtn1変数に代入
+//        Button01 = findViewById(R.id.button01);
+//        TextView = findViewById(R.id.textView);                   // text1というIDのViewを取得しtext1変数に代入
+//
+//        Button01.setOnClickListener(new View.OnClickListener() {// btn1にクリックリスナーを設定（定義も同時に行っている）
+//            @Override
+//            public void onClick(View view) {	// 設定したViewがクリックされたら実行されるメソッド
+//                TextView.setText("ok");     // text1のテキストを変更
+//            }
+//        });
 
-        btn1.setOnClickListener(new View.OnClickListener() {// btn1にクリックリスナーを設定（定義も同時に行っている）
-            @Override
-            public void onClick(View view) {	// 設定したViewがクリックされたら実行されるメソッド
-                text1.setText("ok");     // text1のテキストを変更
-            }
-        });
 
 
     }

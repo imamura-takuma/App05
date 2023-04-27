@@ -16,6 +16,7 @@ import com.example.app05.R;
 
 public class HomeFragment extends Fragment {
 
+
     private HomeViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -27,10 +28,14 @@ public class HomeFragment extends Fragment {
         homeViewModel.getText ().observe ( this, new Observer<String> () {
             @Override
             public void onChanged(@Nullable String s) {
+                s= "home";
                 textView.setText ( s );
             }
+
         } );
         return root;
+
+
 
     }
 }
